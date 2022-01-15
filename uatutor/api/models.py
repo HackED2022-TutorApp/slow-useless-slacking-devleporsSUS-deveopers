@@ -11,9 +11,9 @@ class Tutors(models.Model):
         ('MSc', "Master"),
         ('Phd', 'Doctoral')
     ]
-    degree = models.CharField(choices=degreeChoices)
+    degree = models.CharField(choices=degreeChoices, max_length=20)
     major = models.CharField(max_length=20, blank=False, null=False)
     minor = models.CharField(max_length=20, blank =True, null=True)
-    subject = models.CharField()
+    subject = models.CharField(max_length=20)
     
 
